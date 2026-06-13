@@ -1,0 +1,56 @@
+name: General issue (English)
+description: File items that need to be tracked on GitHub after discussion on Discord
+title: "[Issue] "
+labels:
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before creating an issue, please discuss it on Discord first. To keep things moving smoothly, we generally ask that issues are discussed on Discord in advance.
+        https://fraxinus.jp/discord
+
+        Exceptions may be made for typos or minor documentation fixes.
+        After the topic has been organized on Discord, use this form when it needs to be tracked on GitHub.
+        Issues that do not follow this guidance may be closed with a note directing you to the appropriate process.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Pre-submission confirmation
+      options:
+        - label: I have already discussed this on Discord
+          required: true
+        - label: This is not a typo or minor documentation fix, and it is worth tracking on GitHub
+          required: true
+  - type: input
+    id: discord_context
+    attributes:
+      label: Discord discussion context
+      description: Add the related thread, what was discussed, key points, or other context
+      placeholder: "Example: Discussed in the #00tw channel on Discord on 2026-03-22"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the problem or proposal
+      placeholder: Describe the problem or proposal
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: Add any context, target files, related parts, or history needed to make a decision
+      placeholder: Add background or supplemental information
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected outcome
+      description: Describe what state should count as resolved
+      placeholder: Describe the expected outcome
+    validations:
+      required: false

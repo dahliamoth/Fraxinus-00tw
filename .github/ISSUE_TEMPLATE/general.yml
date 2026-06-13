@@ -1,0 +1,56 @@
+name: General issue
+description: Discord での相談後に GitHub で追跡が必要になった内容を登録します
+title: "[Issue] "
+labels:
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issue を作成する前に、まずは Discord でご相談ください。よりスムーズに進めるため、原則として Discord での事前相談をお願いしています。
+        https://fraxinus.jp/discord
+
+        ただし、typo や軽微な文書修正のような例外はこの限りではありません。
+        Discord での整理後、GitHub 上で追跡する必要がある場合にこのフォームを使ってください。
+        この案内に沿っていない Issue は、案内のうえで close する場合があります。
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 事前確認
+      options:
+        - label: Discord で事前に相談済みです
+          required: true
+        - label: この内容は typo や軽微な文書修正ではなく、GitHub 上で追跡する価値があります
+          required: true
+  - type: input
+    id: discord_context
+    attributes:
+      label: Discord での相談内容
+      description: 関連スレッド、話した内容、要点などを記入してください
+      placeholder: "例: Discord の #00tw チャンネルで 2026-03-22 に相談"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: 内容
+      description: 何が問題なのか、または何を提案したいのかを簡潔に書いてください
+      placeholder: 問題点や提案内容を記入
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: 判断に必要な経緯、対象ファイル、関連パーツなどがあれば記入してください
+      placeholder: 背景や補足情報を記入
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する状態
+      description: どうなれば解決とみなせるかを書いてください
+      placeholder: 期待する状態を記入
+    validations:
+      required: false

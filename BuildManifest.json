@@ -1,0 +1,749 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "fraxinus-00tw",
+    "name": "Fraxinus 00tw",
+    "repository": "https://github.com/Fraxinus-3D/Fraxinus-00tw",
+    "bom": "https://docs.google.com/spreadsheets/d/19fQIWK0SdqDgKVRF4X4_5_RLVrDqLEBR/edit?usp=drive_link&ouid=101092446771758846175&rtpof=true&sd=true",
+    "bomDocument": "BOM.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "options": [
+    {
+      "id": "bed",
+      "label": {
+        "ja": "ベッド",
+        "en": "Bed"
+      },
+      "defaultChoice": "normal-bed",
+      "choices": [
+        {
+          "id": "normal-bed",
+          "label": {
+            "ja": "通常ベッド",
+            "en": "Normal bed"
+          }
+        },
+        {
+          "id": "heated-bed",
+          "label": {
+            "ja": "ヒートベッド",
+            "en": "Heated bed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "extruder",
+      "label": {
+        "ja": "エクストルーダー周辺",
+        "en": "Extruder area"
+      },
+      "defaultChoice": "hgx-lite",
+      "choices": [
+        {
+          "id": "hgx-lite",
+          "label": {
+            "ja": "HGX-Lite",
+            "en": "HGX-Lite"
+          }
+        },
+        {
+          "id": "sherpa-mini",
+          "label": {
+            "ja": "sherpa mini",
+            "en": "sherpa mini"
+          }
+        }
+      ]
+    },
+    {
+      "id": "feet",
+      "label": {
+        "ja": "フット",
+        "en": "Feet"
+      },
+      "defaultChoice": "corn",
+      "choices": [
+        {
+          "id": "corn",
+          "label": {
+            "ja": "corn",
+            "en": "corn"
+          }
+        },
+        {
+          "id": "pillar",
+          "label": {
+            "ja": "pillar",
+            "en": "pillar"
+          }
+        }
+      ]
+    },
+    {
+      "id": "controlPanel",
+      "label": {
+        "ja": "操作パネル",
+        "en": "Control panel"
+      },
+      "defaultChoice": "dpdt-sw",
+      "choices": [
+        {
+          "id": "dpdt-sw",
+          "label": {
+            "ja": "DPDT SW",
+            "en": "DPDT SW"
+          }
+        },
+        {
+          "id": "pwm-volume",
+          "label": {
+            "ja": "PWM volume",
+            "en": "PWM volume"
+          }
+        }
+      ]
+    },
+    {
+      "id": "printHead",
+      "label": {
+        "ja": "プリントヘッド",
+        "en": "Print head"
+      },
+      "defaultChoice": "normal",
+      "choices": [
+        {
+          "id": "normal",
+          "label": {
+            "ja": "normal",
+            "en": "normal"
+          }
+        },
+        {
+          "id": "ir-sensor",
+          "label": {
+            "ja": "IR sensor",
+            "en": "IR sensor"
+          }
+        }
+      ]
+    }
+  ],
+  "naming": {
+    "parentheses": {
+      "ja": "`(...)` のディレクトリはいずれかを選んで使う選択式の部品です。",
+      "en": "Directories in `(...)` contain selectable parts."
+    },
+    "colorRoles": [
+      {
+        "marker": "[a]",
+        "role": "accent",
+        "label": {
+          "ja": "アクセントカラー",
+          "en": "Accent color"
+        }
+      },
+      {
+        "marker": "[a2]",
+        "role": "accent2",
+        "label": {
+          "ja": "2つ目のアクセントカラー",
+          "en": "Second accent color"
+        }
+      }
+    ],
+    "quantitySuffix": {
+      "ja": "`_x1` や `_x4` のような末尾は必要な印刷数量を示しています。",
+      "en": "Suffixes such as `_x1` or `_x4` indicate the required print quantity."
+    }
+  },
+  "files": [
+    {
+      "path": "3MFs/Bed/[a]_holder_switch_x1.3mf",
+      "type": "3mf",
+      "group": "Bed",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Bed/knob_adjust_x3.3mf",
+      "type": "3mf",
+      "group": "Bed",
+      "quantity": 3,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Bed/spacer_nut_x3.3mf",
+      "type": "3mf",
+      "group": "Bed",
+      "quantity": 3,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Bed/(heated bed)/[a]_frame_heatbed_x1.3mf",
+      "type": "3mf",
+      "group": "Bed",
+      "quantity": 1,
+      "colorRole": "accent",
+      "when": {
+        "bed": "heated-bed"
+      }
+    },
+    {
+      "path": "3MFs/Bed/(normal bed)/[a]_frame_bed_x1.3mf",
+      "type": "3mf",
+      "group": "Bed",
+      "quantity": 1,
+      "colorRole": "accent",
+      "when": {
+        "bed": "normal-bed"
+      }
+    },
+    {
+      "path": "3MFs/Bed/(normal bed)/plate_bed_x1.3mf",
+      "type": "3mf",
+      "group": "Bed",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "bed": "normal-bed"
+      }
+    },
+    {
+      "path": "3MFs/Electronics_FilamentRouting/[a]_clip.3mf",
+      "type": "3mf",
+      "group": "Electronics_FilamentRouting",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Electronics_FilamentRouting/[a]_filament_inlet_x1.3mf",
+      "type": "3mf",
+      "group": "Electronics_FilamentRouting",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Electronics_FilamentRouting/[a]_PD_module_mounter.3mf",
+      "type": "3mf",
+      "group": "Electronics_FilamentRouting",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Electronics_FilamentRouting/holder raspi02w skr-pico f00/[a]_holder_raspi02w_x2.3mf",
+      "type": "3mf",
+      "group": "Electronics_FilamentRouting",
+      "quantity": 2,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Electronics_FilamentRouting/holder raspi02w skr-pico f00/[a]_holder_skr-pico_base_x1.3mf",
+      "type": "3mf",
+      "group": "Electronics_FilamentRouting",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Electronics_FilamentRouting/holder raspi02w skr-pico f00/[a]_holder_skr-pico_x1.3mf",
+      "type": "3mf",
+      "group": "Electronics_FilamentRouting",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Extruder_RearPanel/(HGX-Lite)/[a2]_plate_grid_hgx.3mf",
+      "type": "3mf",
+      "group": "Extruder_RearPanel",
+      "quantity": 1,
+      "colorRole": "accent2",
+      "when": {
+        "extruder": "hgx-lite"
+      }
+    },
+    {
+      "path": "3MFs/Extruder_RearPanel/(HGX-Lite)/plate_back_hgx.3mf",
+      "type": "3mf",
+      "group": "Extruder_RearPanel",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "extruder": "hgx-lite"
+      }
+    },
+    {
+      "path": "3MFs/Extruder_RearPanel/(HGX-Lite)/plate_back_sub_hgx.3mf",
+      "type": "3mf",
+      "group": "Extruder_RearPanel",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "extruder": "hgx-lite"
+      }
+    },
+    {
+      "path": "3MFs/Extruder_RearPanel/(sherpa mini)/[a2]_plate_grid_sherpa.3mf",
+      "type": "3mf",
+      "group": "Extruder_RearPanel",
+      "quantity": 1,
+      "colorRole": "accent2",
+      "when": {
+        "extruder": "sherpa-mini"
+      }
+    },
+    {
+      "path": "3MFs/Extruder_RearPanel/(sherpa mini)/plate_back_sherpa.3mf",
+      "type": "3mf",
+      "group": "Extruder_RearPanel",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "extruder": "sherpa-mini"
+      }
+    },
+    {
+      "path": "3MFs/Extruder_RearPanel/(sherpa mini)/plate_back_sub_sherpa.3mf",
+      "type": "3mf",
+      "group": "Extruder_RearPanel",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "extruder": "sherpa-mini"
+      }
+    },
+    {
+      "path": "3MFs/Feet/(corn)/[a2]_foot_corn_base_x4.3mf",
+      "type": "3mf",
+      "group": "Feet",
+      "quantity": 4,
+      "colorRole": "accent2",
+      "when": {
+        "feet": "corn"
+      }
+    },
+    {
+      "path": "3MFs/Feet/(corn)/[a2]_foot_corn_inner_x4.3mf",
+      "type": "3mf",
+      "group": "Feet",
+      "quantity": 4,
+      "colorRole": "accent2",
+      "when": {
+        "feet": "corn"
+      }
+    },
+    {
+      "path": "3MFs/Feet/(pillar)/[a2]_foot_pillar_x4.3mf",
+      "type": "3mf",
+      "group": "Feet",
+      "quantity": 4,
+      "colorRole": "accent2",
+      "when": {
+        "feet": "pillar"
+      }
+    },
+    {
+      "path": "3MFs/Frames/cable mounter/[a]_cable mounter.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/frame top/frame_top_L_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/frame top/frame_top_R_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel bottom/plate_bottom_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel front/[a]_door_arm_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/panel front/[a]_plate_door_inner_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/panel front/[a]_spacer_hinge_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/panel front/[a2]_door handle_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent2"
+    },
+    {
+      "path": "3MFs/Frames/panel front/[a2]_door_handle_base_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent2"
+    },
+    {
+      "path": "3MFs/Frames/panel front/frame_bottom_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel front/frame_upper_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel front/plate_door_base_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel side L/[a]_fan_mount_L_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/panel side L/plate_side_L_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel side R/[a]_fan_mount_R_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/panel side R/plate_side_R_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/panel_middle/plate_middle_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/tophat/[a]_plate_back_inner_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/tophat/[a]_plate_top_inner_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/Frames/tophat/[a2]_knob_locking_base_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent2"
+    },
+    {
+      "path": "3MFs/Frames/tophat/[a2]_knob_locking_cap_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent2"
+    },
+    {
+      "path": "3MFs/Frames/tophat/[a2]_knob_locking_inner_x2.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 2,
+      "colorRole": "accent2"
+    },
+    {
+      "path": "3MFs/Frames/tophat/plate_back_base_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/tophat/plate_left_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/tophat/plate_right_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/Frames/tophat/plate_top_base_x1.3mf",
+      "type": "3mf",
+      "group": "Frames",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/PanelControl/[a2]_knob R_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "accent2"
+    },
+    {
+      "path": "3MFs/PanelControl/mount_OLED_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/PanelControl/(DPDT SW)/[a2]_knob_L_DPDT_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "accent2",
+      "when": {
+        "controlPanel": "dpdt-sw"
+      }
+    },
+    {
+      "path": "3MFs/PanelControl/(DPDT SW)/guide_switch_A_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "controlPanel": "dpdt-sw"
+      }
+    },
+    {
+      "path": "3MFs/PanelControl/(DPDT SW)/guide_switch_B_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "controlPanel": "dpdt-sw"
+      }
+    },
+    {
+      "path": "3MFs/PanelControl/(DPDT SW)/panel_control_DPDT_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "controlPanel": "dpdt-sw"
+      }
+    },
+    {
+      "path": "3MFs/PanelControl/(PWM volume)/[a2]_knob_L_pwm_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "accent2",
+      "when": {
+        "controlPanel": "pwm-volume"
+      }
+    },
+    {
+      "path": "3MFs/PanelControl/(PWM volume)/panel_control_pwm_x1.3mf",
+      "type": "3mf",
+      "group": "PanelControl",
+      "quantity": 1,
+      "colorRole": "main",
+      "when": {
+        "controlPanel": "pwm-volume"
+      }
+    },
+    {
+      "path": "3MFs/PrintHead/[a]_holder_mgn9c_x1.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 1,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/PrintHead/(IR sensor)/[a]_duct_sidefan_5015_narrow_x2.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 2,
+      "colorRole": "accent",
+      "when": {
+        "printHead": "ir-sensor"
+      }
+    },
+    {
+      "path": "3MFs/PrintHead/(IR sensor)/[a]_holder_head-wire_IR_L.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 1,
+      "colorRole": "accent",
+      "when": {
+        "printHead": "ir-sensor"
+      }
+    },
+    {
+      "path": "3MFs/PrintHead/(IR sensor)/[a]_holder_head-wire_IR_R.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 1,
+      "colorRole": "accent",
+      "when": {
+        "printHead": "ir-sensor"
+      }
+    },
+    {
+      "path": "3MFs/PrintHead/(normal)/[a]_duct_sidefan_5015_x2.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 2,
+      "colorRole": "accent",
+      "when": {
+        "printHead": "normal"
+      }
+    },
+    {
+      "path": "3MFs/PrintHead/(normal)/[a]_holder_head-wire_L.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 1,
+      "colorRole": "accent",
+      "when": {
+        "printHead": "normal"
+      }
+    },
+    {
+      "path": "3MFs/PrintHead/(normal)/[a]_holder_head-wire_R.3mf",
+      "type": "3mf",
+      "group": "PrintHead",
+      "quantity": 1,
+      "colorRole": "accent",
+      "when": {
+        "printHead": "normal"
+      }
+    },
+    {
+      "path": "3MFs/XCarriage_ZCarriage_XYGantry/[a]_reel_f00w_x3.3mf",
+      "type": "3mf",
+      "group": "XCarriage_ZCarriage_XYGantry",
+      "quantity": 3,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/XCarriage_ZCarriage_XYGantry/[a]_spacer_bearing_x12.3mf",
+      "type": "3mf",
+      "group": "XCarriage_ZCarriage_XYGantry",
+      "quantity": 12,
+      "colorRole": "accent"
+    },
+    {
+      "path": "3MFs/XCarriage_ZCarriage_XYGantry/plate_carriage_x2.3mf",
+      "type": "3mf",
+      "group": "XCarriage_ZCarriage_XYGantry",
+      "quantity": 2,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/XCarriage_ZCarriage_XYGantry/plate_stopper_Z_L_x1.3mf",
+      "type": "3mf",
+      "group": "XCarriage_ZCarriage_XYGantry",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/XCarriage_ZCarriage_XYGantry/plate_stopper_Z_R_x1.3mf",
+      "type": "3mf",
+      "group": "XCarriage_ZCarriage_XYGantry",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "3MFs/XCarriage_ZCarriage_XYGantry/plate_x_carriage_x1.3mf",
+      "type": "3mf",
+      "group": "XCarriage_ZCarriage_XYGantry",
+      "quantity": 1,
+      "colorRole": "main"
+    },
+    {
+      "path": "DXFs/panel back.dxf",
+      "type": "dxf",
+      "group": "Panels",
+      "quantity": 1
+    },
+    {
+      "path": "DXFs/panel door.dxf",
+      "type": "dxf",
+      "group": "Panels",
+      "quantity": 1
+    },
+    {
+      "path": "DXFs/panel side x2.dxf",
+      "type": "dxf",
+      "group": "Panels",
+      "quantity": 2
+    },
+    {
+      "path": "DXFs/panel top.dxf",
+      "type": "dxf",
+      "group": "Panels",
+      "quantity": 1
+    },
+    {
+      "path": "PrintSets/Printed Parts for Bambu Studio.3mf",
+      "type": "printSet",
+      "group": "PrintSets",
+      "quantity": 1,
+      "slicer": "Bambu Studio"
+    },
+    {
+      "path": "PrintSets/Printed Parts for OrcaSlicer - Colorized.3mf",
+      "type": "printSet",
+      "group": "PrintSets",
+      "quantity": 1,
+      "slicer": "OrcaSlicer"
+    }
+  ]
+}
