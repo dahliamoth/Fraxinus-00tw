@@ -10,7 +10,7 @@ https://www.mouser.com/ProductDetail/538-15135-0403
 https://www.digikey.com/en/products/detail/molex/0151350403/6833474
 - M3x25mm grub screws https://www.amazon.com/dp/B0DDHN1C8C
 - M3x4x5 brass heat sets (if using modified knobs) https://www.amazon.com/dp/B0D7M3LJDL
-- bed springs
+- bed springs. used 0.5x5.5x11x10x5 springs from [this set](https://www.amazon.com/dp/B0DRVND2LM)
 
 
 ## Files to print
