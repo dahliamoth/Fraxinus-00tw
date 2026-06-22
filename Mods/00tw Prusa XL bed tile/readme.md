@@ -3,9 +3,7 @@ Does not give any more print area despite being larger. Is still 70x70mm
 
 ## BOM
 - Prusa XL Bedtile https://www.prusa3d.com/product/heatbed-tile/
-- magnetic spring steel plate 90mmx90mm (self source or cut from a larger one). DXF in 
-
-## mod folder
+- magnetic spring steel plate 90mmx90mm (self source or cut from a larger one). DXF in mod folder
 - molex clickmate 4 harness (3 options for sourcing) 
 https://www.prusa3d.com/product/modular-bed-cable/
 https://www.mouser.com/ProductDetail/538-15135-0403
