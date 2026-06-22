@@ -1,4 +1,4 @@
-Intended to be used with [Moonraker loader](https://github.com/shiftingtech/Moonraker-loader) or for an external USB camera.
+Intended to be used with [Moonraker loader](https://github.com/shiftingtech/Moonraker-loader), the USB ADXL, or for an external USB camera.
 
 ### BOM
 - USB panel mount https://www.amazon.com/dp/B09SQ86ZJM
