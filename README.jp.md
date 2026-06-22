@@ -1,6 +1,6 @@
 # Fraxinus 00tw
 
-[ENGLISH](README.en.md) | [日本語](README.md)
+[ENGLISH](README.md) | [日本語](README.jp.md)
 
 Fraxinus 00twはFraxinusコミュニティのプロジェクトの一つで、福馬洋平氏 (https://x.com/fukumay1) による Fraxinus 00w をベースにした派生プロジェクトです。
 
