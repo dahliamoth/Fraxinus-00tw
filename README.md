@@ -1,6 +1,7 @@
 # Fraxinus 00tw
+# Fork containing [Mods](https://github.com/dahliamoth/Fraxinus-00tw/tree/main/Mods) that were made by me and used on my personal build
 
-[日本語](README.md) | [ENGLISH](README.en.md)
+[日本語](README.jp.md) | [ENGLISH](README.md)
 
 Fraxinus 00tw is one of the projects in the Fraxinus community, derived from Fraxinus 00w by Yohei Fukuma (https://x.com/fukumay1).
 
