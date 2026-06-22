@@ -3,3 +3,4 @@ Will likely interfere with larger size batteries or if using a the full size PI 
 
 https://www.amazon.com/dp/B09SQ86ZJM
 
+![description](https://github.com/dahliamoth/Fraxinus-00tw/blob/main/Mods/USB%20side%20panel/USB%20side%20panel.jpg?raw=true)
