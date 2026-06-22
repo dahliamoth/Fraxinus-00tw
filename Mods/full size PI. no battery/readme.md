@@ -3,3 +3,5 @@ Print a second set of mounts for the SKR Pico. Rpi has the same mount pattern as
 For the BTT Pi, I did have to manually modify the mount and space it up on the mount. BTT Pi has some stuff on the underside that interferes.
 Unsure if RPI will fit better.
 Never bothered to fix it in CAD
+
+![description](https://raw.githubusercontent.com/dahliamoth/Fraxinus-00tw/refs/heads/main/Mods/full%20size%20PI.%20no%20battery/basetwoboards.png)
