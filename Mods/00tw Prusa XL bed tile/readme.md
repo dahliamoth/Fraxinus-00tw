@@ -22,4 +22,5 @@ Use of the included shorter fan ducts is required, as the standard ducts will hi
 Grub screws install into the bed tile from underneath and stay permanently, snug them in. This allows adjustability using the knobs. The modified knobs are not necessary, but they move the threads to the top of the knob using a headset, which makes it easier to thread in. Wire up the bed plate referencing the below image. Polarity is not important on heater or thermistor. Unsure of length of the Prusa harness, but the 300mm ones from digikey or mouser are perfect length to reach the SKR pico.
 Sensor value in klipper will be “EPCOS 100K B57560G104F” or “Generic 3950” both are nearly identical
 
- 
+![description](https://github.com/dahliamoth/Fraxinus-00tw/blob/main/Mods/00tw%20Prusa%20XL%20bed%20tile/bed%20underside.jpg)
+![description](https://github.com/dahliamoth/Fraxinus-00tw/blob/main/Mods/00tw%20Prusa%20XL%20bed%20tile/heatset%20bed%20nuts.jpg)
