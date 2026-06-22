@@ -4,7 +4,8 @@ Motor used: https://www.omc-stepperonline.com/nema-14-bipolar-1-8deg-18ncm-25-5o
 Any nema 14 can be used for this, but 40mm long will be the absolute max to clear the original back plate (based on measuring in CAD). No more than 34mm long should be used typically
 
 
-# Version of the nema14 Z mod to also use protoxtruder. https://www.printables.com/model/436425-protoxtruder/
+# Version of the nema14 Z mod to also use protoxtruder. 
+https://www.printables.com/model/436425-protoxtruder/
 
 Uses the modified plate back along with existing parts from the original files, which will be obtained via CAD or the shared 3mf files:
 
